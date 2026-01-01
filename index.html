@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adityo Nugroho | AI Solutions Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div id="canvas-container">
+        <canvas id="network-canvas"></canvas>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content fade-in">
+                <p class="mono">Hi, my name is</p>
+                <h1>Adityo Nugroho.</h1>
+                <h1 style="color: var(--text-secondary);">I architect reliable systems.</h1>
+
+                <p class="tagline">
+                    AI Solutions Engineer specializing in building production-grade AI & High-Frequency Trading systems.
+                    I bridge the gap between operational complexity and reliable automation.
+                </p>
+
+                <div class="links">
+                    <a href="https://github.com/adityonugrohoid" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/adityonugrohoid" target="_blank" class="btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="mailto:adityo.nugroho.id@gmail.com" class="btn">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="fade-in">
+            <h2><span class="mono">01.</span> About Me</h2>
+            <div class="inner">
+                <p>
+                    I combine <span style="color: var(--accent);">18+ years of high-throughput network
+                        optimization</span> (Huawei, Nokia, Siemens) with modern ML engineering to build reliable, 24/7
+                    automated infrastructure.
+                </p>
+                <p>
+                    I don't just build models; I build the production pipelines, APIs, and failover systems that turn
+                    models into reliable business solutions.
+                </p>
+
+                <div class="value-prop">
+                    "I offer the rare combination of a General Manager's strategic context (18Y Ops Leadership) with a
+                    Production Engineer's hands-on reliability."
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
+            <h2><span class="mono">02.</span> Engineering Highlights</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <header>
+                        <span class="architecture">Async Python • Systemd • Ed25519</span>
+                        <h3>Trailing Edge Trading System</h3>
+                    </header>
+                    <p>
+                        Architected a 24/7 Algorithmic Trading Bot deployed on Linux VPS. Achieved sub-100ms latency on
+                        real-time WebSocket streams with non-blocking order management. Designed for maximum system
+                        reliability.
+                    </p>
+                    <footer>
+                        <a href="https://github.com/adityonugrohoid/trailing-edge" target="_blank" class="text-link">
+                            <i class="fab fa-github"></i> View Architecture
+                        </a>
+                    </footer>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <header>
+                        <span class="architecture">Parquet • SDV • Physics-based Modeling</span>
+                        <h3>Telecom Digital Twin</h3>
+                    </header>
+                    <p>
+                        Designed a deterministic synthetic data pipeline generating 5.6M interconnected sessions.
+                        Enforced referential integrity and schema validation to create reproduction-ready datasets for
+                        ML training (XGBoost/LightGBM).
+                    </p>
+                    <footer>
+                        <a href="https://github.com/adityonugrohoid/telecom-digital-twin" target="_blank"
+                            class="text-link">
+                            <i class="fab fa-github"></i> View Pipeline
+                        </a>
+                    </footer>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <header>
+                        <span class="architecture">FIX 4.4 Protocol • Thread-safe</span>
+                        <h3>RATU FIX Connector</h3>
+                    </header>
+                    <p>
+                        Built a low-latency Financial Information Exchange (FIX) connector. Wrote custom defensive
+                        parsers to handle malformed financial data streams when standard SDKs failed in production
+                        environments.
+                    </p>
+                    <footer>
+                        <a href="https://github.com/adityonugrohoid/ratu-fix-bot" target="_blank" class="text-link">
+                            <i class="fab fa-github"></i> View Connector
+                        </a>
+                    </footer>
+                </article>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                <a href="https://github.com/adityonugrohoid?tab=repositories" class="btn">
+                    View Full Project Portfolio
+                </a>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="tech" class="fade-in">
+            <h2><span class="mono">03.</span> Technical Authority</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4><i class="fas fa-server"></i> Architecture</h4>
+                    <p>Async Python, Systemd, Linux VPS, Microservices, Event-Driven Systems</p>
+                </div>
+                <div class="tech-item">
+                    <h4><i class="fas fa-database"></i> ML & Data</h4>
+                    <p>XGBoost, LightGBM, SHAP, pandas, Parquet, Synthetic Data (SDV)</p>
+                </div>
+                <div class="tech-item">
+                    <h4><i class="fas fa-network-wired"></i> Connectivity</h4>
+                    <p>REST APIs, WebSockets, FIX 4.4 Protocol, JSON-RPC</p>
+                </div>
+                <div class="tech-item">
+                    <h4><i class="fas fa-brain"></i> AI Integration</h4>
+                    <p>Google Gemini API, Multi-Model Pipelines, Prompt Engineering</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seeking Section -->
+        <section id="seeking" class="fade-in">
+            <h2><span class="mono">04.</span> What's Next?</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-secondary);">
+                I am currently open for opportunities!
+            </p>
+            <div class="project-card" style="border: 1px solid var(--accent);">
+                <h3 style="color: var(--accent);">Seeking Roles In:</h3>
+                <ul style="list-style: none; margin-top: 1rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                            style="color: var(--accent); margin-right: 10px;"></i> <strong>AI Solutions Engineer /
+                            Architect</strong></li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                            style="color: var(--accent); margin-right: 10px;"></i> <strong>Observability & APM</strong>
+                        (Monitoring complex systems)</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                            style="color: var(--accent); margin-right: 10px;"></i> <strong>Fintech & Trading</strong>
+                        (Real-time decision systems)</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i>
+                        <strong>Industrial AI / IoT</strong> (Capacity planning)</li>
+                </ul>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="mailto:adityo.nugroho.id@gmail.com" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Designed & Built by Adityo Nugroho</p>
+            <p>Based in Indonesia (UTC+7) | Remote Preferred</p>
+        </footer>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
