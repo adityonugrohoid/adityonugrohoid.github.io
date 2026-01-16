@@ -83,7 +83,7 @@ class NetworkAnimation {
         this.ctx.clearRect(0, 0, this.width, this.height);
         
         // Draw connections
-        this.ctx.strokeStyle = 'rgba(255, 215, 0, 0.05)';
+        this.ctx.strokeStyle = 'rgba(212, 175, 55, 0.05)';
         this.ctx.lineWidth = 1;
         
         for (let i = 0; i < this.particles.length; i++) {
@@ -102,7 +102,7 @@ class NetworkAnimation {
         }
 
         // Draw particles
-        this.ctx.fillStyle = 'rgba(255, 215, 0, 0.3)';
+        this.ctx.fillStyle = 'rgba(212, 175, 55, 0.3)';
         this.particles.forEach(p => {
             this.ctx.beginPath();
             this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
