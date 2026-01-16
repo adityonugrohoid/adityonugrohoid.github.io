@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #0b0c10;
-    --bg-secondary: #1f2833;
+    --bg-color: #0a0a0a;
+    --bg-secondary: #1a1a1a;
     --text-primary: #e6e6e6;
     --text-secondary: #a0a0a0;
-    --accent: #FFD700;
-    --accent-tint: rgba(255, 215, 0, 0.1);
+    --accent: #D4AF37;
+    --accent-tint: rgba(212, 175, 55, 0.1);
     --font-heading: 'Inter', -apple-system, sans-serif;
     --font-mono: 'Fira Code', monospace;
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -59,7 +59,7 @@ h2::after {
     width: 200px;
     /* Fixed width line often looks better than % */
     height: 1px;
-    background-color: #233554;
+    background-color: rgba(212, 175, 55, 0.3);
     margin-left: 20px;
 }
 
@@ -186,7 +186,7 @@ section {
 
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 215, 0, 0.3);
+    border-color: rgba(212, 175, 55, 0.3);
     box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }
 
@@ -206,6 +206,35 @@ section {
 .project-card p {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+}
+
+/* Project name links */
+.project-card h3 a,
+.project-card ul li strong a,
+.project-card ul li a {
+    transition: var(--transition);
+}
+
+.project-card h3 a:hover {
+    color: var(--accent) !important;
+    text-decoration: underline !important;
+}
+
+/* LIVE badge hover effect */
+.project-card h3 a[style*="color: var(--accent)"]:hover {
+    opacity: 0.8;
+    text-decoration: underline !important;
+}
+
+.project-card ul li strong a:hover {
+    color: var(--accent) !important;
+    text-decoration: underline !important;
+}
+
+/* Ensure all links in project cards (including RATU suite) have hover effect */
+.project-card ul li a:hover {
+    color: var(--accent) !important;
+    text-decoration: underline !important;
 }
 
 /* Tech Grid */
