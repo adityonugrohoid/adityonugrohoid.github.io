@@ -9,40 +9,313 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 3rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #3182ce;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            color: #4a5568;
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #3182ce;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #2c5aa0;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .section-number {
+            color: #3182ce;
+            margin-right: 0.5rem;
+        }
+
+        .section p + p {
+            margin-top: 1.25rem;
+        }
+
+        .value-prop {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #2c5aa0;
+            border-radius: 4px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: #cbd5e0;
+            transform: translateY(-2px);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .project-card h3 a:hover {
+            color: #3182ce;
+        }
+
+        .architecture {
+            font-size: 0.75rem;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .project-subtitle {
+            font-size: 0.875rem;
+            color: #3182ce;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .project-card p, .project-card ul {
+            font-size: 0.9375rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .project-card ul {
+            margin-left: 1.5rem;
+        }
+
+        .project-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card footer {
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: auto;
+        }
+
+        .text-link {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .text-link:hover {
+            color: #2c5aa0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-item {
+            background: #f7fafc;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .tech-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-item h4 i {
+            color: #3182ce;
+        }
+
+        .tech-item p {
+            font-size: 0.875rem;
+            color: #4a5568;
+        }
+
+        .seeking-box {
+            background: #ebf8ff;
+            border: 2px solid #3182ce;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .seeking-box h3 {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .seeking-box ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .seeking-box li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .seeking-box i.fa-check {
+            color: #3182ce;
+            margin-top: 0.25rem;
+        }
+
+        .center-btn {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: #a0aec0;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Background Animation -->
-    <div id="canvas-container">
-        <canvas id="network-canvas"></canvas>
-    </div>
-
-    <!-- Main Content -->
-    <main class="container">
-
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-content fade-in">
-                <p class="mono">Hi, my name is</p>
-                <h1>Adityo Nugroho.</h1>
-                <p style="color: var(--accent); font-size: clamp(1.1rem, 2vw, 1.3rem); margin-bottom: 1rem; font-weight: 600;">
-                    AI/ML Engineer - Telecom/Industrial Domain Expert | 18+ Years Network Optimization Leadership (Deputy GM at Huawei)
-                </p>
-
+    <!-- Header / Hero Section -->
+    <div class="header">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Adityo Nugroho</h1>
+                <p class="subtitle">AI/ML Engineer - Telecom/Industrial Domain Expert | 18+ Years Network Optimization Leadership (Deputy GM at Huawei)</p>
                 <p class="tagline">
-                    I build the AI tools my teams needed: event-driven log analyzers (63x noise reduction), RAG troubleshooting
-                    engines with hallucination-resistant guardrails, and agentic automation with safety gates.
+                    I build AI systems to address real operational bottlenecks, from event-driven log analysis with 63x noise reduction to RAG-based troubleshooting and agentic automation with explicit safety gates.
                 </p>
-
                 <div class="links">
                     <a href="https://github.com/adityonugrohoid" target="_blank" class="btn">
                         <i class="fab fa-github"></i> GitHub
@@ -55,56 +328,44 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
 
         <!-- About Section -->
-        <section id="about" class="fade-in">
-            <h2><span class="mono">01.</span> About Me</h2>
-            <div class="inner">
-                <p>
-                    After 18 years leading network optimization for operators serving millions (Deputy GM at Huawei), I
-                    witnessed what breaks at scale and built AI systems to fix it. I pivoted into AI/ML engineering to
-                    address these bottlenecks, architecting and deploying <span style="color: var(--accent);">12
-                        production-ready systems in 14 months</span> (Nov 2024-Jan 2026), including AI/ML systems spanning GenAI on Cloud Run (CI/CD), RAG, agentic AI, MLOps pipelines, and production infrastructure.
-                </p>
-                <p>
-                    I bring 18+ years of domain authority in leading network optimization for large-scale systems to the systems I now
-                    automate. My designs prioritize operational resilience, ensuring systems gracefully handle
-                    real-world constraints like partial outages, race conditions, and rate limits.
-                </p>
-
-                <div class="value-prop">
-                    "I translate technical complexity into measurable business impact. I design for reliability under
-                    stress, not just functionality in demos."
-                </div>
+        <section class="section">
+            <h2><span class="section-number">01.</span> About Me</h2>
+            <p>
+                After 18 years leading network optimization for operators serving millions as Deputy GM at Huawei, I repeatedly encountered operational limits that traditional tooling could not address. This experience motivated my transition into hands-on AI/ML engineering. Over the following 14 months from Nov 2024 to Jan 2026, I designed and delivered <strong style="color: #3182ce;">12 end-to-end systems</strong> spanning AI-driven workflows, data pipelines, and supporting infrastructure across telecom, industrial, and fintech domains. These include GenAI on Cloud Run, RAG-based systems, agentic workflows, MLOps pipelines, and low-latency trading and market data systems.
+            </p>
+            <p>
+                I bring deep domain experience from large-scale network operations into the AI systems I now build. My designs prioritize reliability under real-world constraints, including partial outages, race conditions, and external rate limits.
+            </p>
+            <div class="value-prop">
+                "I translate operational complexity into measurable outcomes by designing AI systems that remain reliable under real-world stress, not just controlled demonstrations."
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="fade-in">
-            <h2><span class="mono">02.</span> Featured Projects</h2>
+        <section class="section">
+            <h2><span class="section-number">02.</span> Featured Projects</h2>
 
             <div class="projects-grid">
                 <!-- Project 1: TRINITY Suite -->
                 <article class="project-card">
-                    <header>
-                        <span class="architecture">Gemini 2.0 • Async Python • RAG • Function Calling</span>
-                        <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+incident-commander+OR+noc-oracle+OR+net-ops-agent&type=repositories" target="_blank" style="color: inherit; text-decoration: none;">TRINITY Operations Suite</a></h3>
-                        <p style="font-size: 0.9rem; color: var(--accent); margin-top: 0.5rem;">AI-Powered Network
-                            Operations: Observe → Decide → Act</p>
-                    </header>
+                    <span class="architecture">Gemini 2.0 Flash Lite • Async Python • RAG • ChromaDB • Function Calling • Pydantic</span>
+                    <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+incident-commander+OR+noc-oracle+OR+net-ops-agent&type=repositories" target="_blank">TRINITY Operations Suite</a></h3>
+                    <p class="project-subtitle">AI-Powered Network Operations: Observe → Decide → Act</p>
                     <p>
-                        A cohesive production-ready suite solving the "Mean Time to Recovery" bottleneck with three
-                        integrated components:
+                        A cohesive integrated suite solving the "Mean Time to Recovery" bottleneck with three
+                        integrated components deployed as part of NOC operations:
                     </p>
-                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: var(--text-secondary);">
-                        <li><strong style="color: var(--text-primary);"><a href="https://github.com/adityonugrohoid/incident-commander" target="_blank" style="color: var(--text-primary); text-decoration: none;">Incident Commander</a>:</strong> Async log analyzer
-                            processing 500 logs/sec with <strong>63x noise reduction</strong></li>
-                        <li><strong style="color: var(--text-primary);"><a href="https://github.com/adityonugrohoid/noc-oracle" target="_blank" style="color: var(--text-primary); text-decoration: none;">NOC-Oracle</a>:</strong> RAG-powered troubleshooting
-                            with <strong>strict citation enforcement and hallucination-resistant guardrails</strong></li>
-                        <li><strong style="color: var(--text-primary);"><a href="https://github.com/adityonugrohoid/net-ops-agent" target="_blank" style="color: var(--text-primary); text-decoration: none;">Net-Ops Agent</a>:</strong> Agentic AI with
-                            <strong>100% human-in-the-loop</strong> safety gates
-                        </li>
+                    <ul>
+                        <li><strong><a href="https://github.com/adityonugrohoid/incident-commander" target="_blank" class="text-link">Incident Commander</a>:</strong> Event-driven log analyzer with <strong>tumbling window batching</strong> (5s or 100 items) and <strong>async architecture</strong> for non-blocking I/O. Uses semantic root cause clustering via Gemini 2.0 Flash Lite with <strong>Pydantic-enforced structured outputs</strong> for real-time incident detection.</li>
+                        <li><strong><a href="https://github.com/adityonugrohoid/noc-oracle" target="_blank" class="text-link">NOC-Oracle</a>:</strong> RAG-powered troubleshooting with <strong>hybrid search</strong> combining semantic vector search and keyword boosting for exact code matching. Features <strong>context-aware chunking</strong> preserving error-solution relationships and <strong>strict context enforcement</strong> preventing hallucination.</li>
+                        <li><strong><a href="https://github.com/adityonugrohoid/net-ops-agent" target="_blank" class="text-link">Net-Ops Agent</a>:</strong> Agentic AI with <strong>reasoning-action separation</strong> pattern and <strong>human-in-the-loop approval gates</strong>. Uses deterministic function calling from pre-defined toolbelt with <strong>Pydantic validation</strong> ensuring type safety. All actions require explicit authorization.</li>
                     </ul>
                     <footer>
                         <a href="https://github.com/search?q=user%3Aadityonugrohoid+incident-commander+OR+noc-oracle+OR+net-ops-agent&type=repositories"
@@ -116,67 +377,69 @@
 
                 <!-- Project 2: AI Studio -->
                 <article class="project-card">
-                    <header>
-                        <span class="architecture">Streamlit • Docker • Cloud Run • Gemini 2.0/2.5</span>
-                        <h3><a href="https://github.com/adityonugrohoid/google-cloud-ai-studio" target="_blank" style="color: inherit; text-decoration: none;">AI Studio</a> <a href="https://google-cloud-ai-studio-1099058340933.us-central1.run.app" target="_blank" style="color: var(--accent); font-size: 0.85rem; text-decoration: none;">● LIVE</a></h3>
-                        <p style="font-size: 0.9rem; color: var(--accent); margin-top: 0.5rem;">Photorealistic Interior
-                            Design: Orchestrated GenAI on Google Cloud Run</p>
-                    </header>
+                    <span class="architecture">Vertex AI • Streamlit • Cloud Run • Gemini 2.0/2.5 • Docker</span>
+                    <h3><a href="https://github.com/adityonugrohoid/google-cloud-ai-studio" target="_blank">Google Cloud AI Studio</a> <span style="color: #3182ce; font-size: 0.85rem;">● LIVE</span></h3>
+                    <p class="project-subtitle">Multi-Step GenAI Workflow for Architectural Design on Google Cloud</p>
                     <p>
-                        An orchestrated GenAI pipeline transforming architectural sketches into photorealistic renders.
-                        Features a deterministic <strong>3-step workflow</strong> (Text → Sketch → Render) with
-                        image-to-image refinement for 1:1 structural alignment.
+                        Cloud-native Streamlit application demonstrating advanced GenAI workflow orchestration using
+                        Google Vertex AI. Transforms simple text descriptions into photorealistic architectural renders
+                        through a <strong>3-stage pipeline</strong>: text enhancement → sketch generation → photorealistic rendering.
                     </p>
+                    <ul>
+                        <li><strong>Text Enhancement Stage:</strong> Uses Gemini 2.0 Flash Lite to expand simple user descriptions into detailed architectural specifications, preparing enriched context for downstream image generation stages</li>
+                        <li><strong>Sketch Generation Stage:</strong> Gemini 2.5 Flash Image creates architectural line drawings from enhanced text descriptions, creating intermediate visual representations for rendering pipeline</li>
+                        <li><strong>Photorealistic Rendering Stage:</strong> Transforms sketches into V-Ray style photorealistic renders using advanced prompting techniques for realistic architectural visualization</li>
+                        <li><strong>Cloud Run Deployment:</strong> Containerized Streamlit application deployed on Google Cloud Run with Vertex AI integration and Docker containerization for scalable cloud deployment</li>
+                    </ul>
                     <footer>
                         <a href="https://github.com/adityonugrohoid/google-cloud-ai-studio" target="_blank"
                             class="text-link">
                             <i class="fab fa-github"></i> View Studio
                         </a>
-                        &nbsp;&nbsp;
+                        <span style="margin: 0 0.5rem;">•</span>
                         <a href="https://google-cloud-ai-studio-1099058340933.us-central1.run.app" target="_blank"
                             class="text-link">
-                            <i class="fas fa-external-link-alt"></i> View App (Cloud Run)
+                            <i class="fas fa-external-link-alt"></i> View App
                         </a>
                     </footer>
                 </article>
 
                 <!-- Project 3: Telecom Digital Twin + MLOps -->
                 <article class="project-card">
-                    <header>
-                        <span class="architecture">MLOps • XGBoost • Parquet • Reproducible Pipelines</span>
-                        <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+telecom-digital-twin+OR+telecom-qoe-analytics&type=repositories" target="_blank" style="color: inherit; text-decoration: none;">Telecom Digital Twin + MLOps Pipeline</a></h3>
-                        <p style="font-size: 0.9rem; color: var(--accent); margin-top: 0.5rem;">End-to-End MLOps:
-                            Synthetic Generation → Model Training → Batch Prediction</p>
-                    </header>
+                    <span class="architecture">Parquet • XGBoost • LightGBM • SHAP • Optuna • Deterministic Seeding</span>
+                    <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+telecom-digital-twin+OR+telecom-qoe-analytics&type=repositories" target="_blank">Telecom Digital Twin + MLOps Pipeline</a></h3>
+                    <p class="project-subtitle">End-to-End MLOps: Synthetic Generation → Model Training → Strategic Insights</p>
                     <p>
-                        A complete MLOps ecosystem combining physics-based simulation with production ML workflows.
+                        A complete MLOps ecosystem combining deterministic data generation with ML workflows.
+                        Generates <strong>50K users with 5.6M sessions</strong> in reproducible fashion, then applies
+                        six-phase analytics pipeline from EDA to strategic recommendations.
                     </p>
-                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: var(--text-secondary);">
-                        <li><strong style="color: var(--text-primary);"><a href="https://github.com/adityonugrohoid/telecom-digital-twin" target="_blank" style="color: var(--text-primary); text-decoration: none;">Digital Twin</a>:</strong> Deterministic data generator producing <strong>5.6M sessions</strong> with SINR/latency modeling. <strong>100% reproducibility</strong> via cascading seed propagation. Parquet schemas with automated validation (FK checks, temporal validity).</li>
-                        <li><strong style="color: var(--text-primary);"><a href="https://github.com/adityonugrohoid/telecom-qoe-analytics" target="_blank" style="color: var(--text-primary); text-decoration: none;">QoE Analytics</a>:</strong> End-to-end ML pipeline with <strong>XGBoost/LightGBM</strong> regression and classification models. SHAP interpretability identified congestion as primary QoE driver (<strong>Cohen's d = -2.75</strong>). Modular architecture with CLI automation and batch prediction.</li>
+                    <ul>
+                        <li><strong><a href="https://github.com/adityonugrohoid/telecom-digital-twin" target="_blank" class="text-link">Digital Twin</a>:</strong> Deterministic multi-table generator with bit-exact reproducibility via cascade-based seeding. Produces 4 output tables (users, cells, sessions, events) with referential integrity validation. Parquet columnar storage with embedded schema metadata for efficient storage.</li>
+                        <li><strong><a href="https://github.com/adityonugrohoid/telecom-qoe-analytics" target="_blank" class="text-link">QoE Analytics</a>:</strong> Six-phase analytics pipeline achieving <strong>R²=0.7247</strong> (XGBoost, MAE=0.3672, RMSE=0.4560) and <strong>ROC-AUC=0.9645</strong> (LightGBM, precision=0.46, recall=0.92). Features <strong>SHAP interpretability</strong> for model explainability and <strong>Cohen's d effect size analysis</strong> for quantifying impact magnitude of QoE drivers.</li>
                     </ul>
                     <footer>
                         <a href="https://github.com/search?q=user%3Aadityonugrohoid+telecom-digital-twin+OR+telecom-qoe-analytics&type=repositories"
                             target="_blank" class="text-link">
-                            <i class="fab fa-github"></i> View Pipeline
+                            <i class="fab fa-github"></i> View Suite
                         </a>
                     </footer>
                 </article>
 
                 <!-- Project 4: Trailing Edge -->
                 <article class="project-card">
-                    <header>
-                        <span class="architecture">Async Python • WebSockets • Systemd • Ed25519</span>
-                        <h3><a href="https://github.com/adityonugrohoid/trailing-edge" target="_blank" style="color: inherit; text-decoration: none;">Trailing Edge</a></h3>
-                        <p style="font-size: 0.9rem; color: var(--accent); margin-top: 0.5rem;">Production Algorithmic
-                            Trading Bot</p>
-                    </header>
+                    <span class="architecture">Async Python • WebSockets • Donchian Channels • Systemd • Ed25519</span>
+                    <h3><a href="https://github.com/adityonugrohoid/trailing-edge" target="_blank">Trailing Edge Trading Bot</a></h3>
+                    <p class="project-subtitle">High-Performance Async Trading Bot with Dynamic Trailing Take-Profit</p>
                     <p>
-                        Proven 24/7 reliability on Cloud VPS during active market periods. Features proprietary
-                        <strong>dynamic trailing take-profit with exponential decay</strong> and regime-aware
-                        auto-compounding. Achieved <strong>sub-100ms latency</strong> with automated systemd-based
-                        orchestration. Demonstrates ability to ship and maintain always-on infrastructure.
+                        High-performance asynchronous Python trading bot for Binance featuring dynamic trailing take-profit strategies, regime detection, Donchian channel gating, and Ed25519 authentication. Built for 24/7 autonomous operation on low-cost infrastructure with low-latency reaction times.
                     </p>
+                    <ul>
+                        <li><strong>Dynamic Trailing Take-Profit:</strong> Exponential decay from start to min factor, automatically adjusting profit targets as gains increase, locking in profits while allowing upside</li>
+                        <li><strong>Regime Detection and Auto-Compounding:</strong> Automatic switching between BASE (holding inventory) and QUOTE (holding cash) modes with all-in compounding for bull rallies</li>
+                        <li><strong>Donchian Channel Hard Stop:</strong> Volatility-aware stop-loss using Donchian Channels with intelligent re-entry gating that waits for price to cross mid-channel in favorable direction after stop triggers</li>
+                        <li><strong>24/7 Systemd Deployment:</strong> Deployed as systemd service for autonomous operation with auto-restart, resource limits, and journald logging</li>
+                    </ul>
                     <footer>
                         <a href="https://github.com/adityonugrohoid/trailing-edge" target="_blank" class="text-link">
                             <i class="fab fa-github"></i> View Architecture
@@ -184,58 +447,73 @@
                     </footer>
                 </article>
 
-                <!-- Project 5: Other Notable Work -->
+                <!-- Project 5: RATU Trading Suite -->
                 <article class="project-card">
-                    <header>
-                        <span class="architecture">Multi-Chain • FIX 4.4 • Open Source • ML Framework</span>
-                        <h3>Other Notable Work</h3>
-                    </header>
-                    <ul style="margin-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
-                        <li><strong style="color: var(--text-primary);"><a href="https://github.com/search?q=user%3Aadityonugrohoid+ratu-moon-radar+OR+ratu-onchain-monitor+OR+ratu-rest-api+OR+ratu-fix-bot&type=repositories" target="_blank" style="color: var(--text-primary); text-decoration: none;">RATU Trading Suite</a>:</strong> 4-component crypto
-                            infrastructure (<a href="https://github.com/adityonugrohoid/ratu-moon-radar" target="_blank" style="color: var(--text-primary); text-decoration: none;">Multi-chain Scanner</a>, <a href="https://github.com/adityonugrohoid/ratu-onchain-monitor" target="_blank" style="color: var(--text-primary); text-decoration: none;">On-Chain Holder Analytics</a>, <a href="https://github.com/adityonugrohoid/ratu-rest-api" target="_blank" style="color: var(--text-primary); text-decoration: none;">Market Data REST API</a>, <a href="https://github.com/adityonugrohoid/ratu-fix-bot" target="_blank" style="color: var(--text-primary); text-decoration: none;">FIX Bot</a>)</li>
-                        <li><strong style="color: var(--text-primary);"><a href="https://github.com/adityonugrohoid/telecom-ml-framework" target="_blank" style="color: var(--text-primary); text-decoration: none;">Telecom ML Framework</a>:</strong> Open-source
-                            v1.0.0 framework (MIT) covering 6 use cases (Churn, RCA, Anomaly, QoE, Capacity,
-                            Optimization)</li>
+                    <span class="architecture">Multi-Chain • FIX 4.4 • Moralis • Ankr • Binance</span>
+                    <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+ratu-moon-radar+OR+ratu-onchain-monitor+OR+ratu-rest-api+OR+ratu-fix-bot&type=repositories" target="_blank">RATU Trading Suite</a></h3>
+                    <p class="project-subtitle">Real-time Automated Trading Unified: Multi-Chain Crypto Infrastructure</p>
+                    <p>
+                        A comprehensive 4-component crypto trading infrastructure for multi-chain token discovery,
+                        on-chain analytics, market data, and low-latency order execution:
+                    </p>
+                    <ul>
+                        <li><strong><a href="https://github.com/adityonugrohoid/ratu-fix-bot" target="_blank" class="text-link">FIX Bot</a>:</strong> FIX Protocol 4.4 connector with <strong>ED25519 authentication</strong> and defensive message parsing. Features three FIX sessions (Market Data, Order Entry, Drop Copy) with spread market making strategy for low-latency order execution</li>
+                        <li><strong><a href="https://github.com/adityonugrohoid/ratu-rest-api" target="_blank" class="text-link">REST API</a>:</strong> Comprehensive market analytics using <strong>7 Binance public endpoints</strong> with multi-timeframe kline analysis (1h, 4h, 1d) and connection pooling. Dataclass-based response parsing ensures type safety</li>
+                        <li><strong><a href="https://github.com/adityonugrohoid/ratu-onchain-monitor" target="_blank" class="text-link">On-Chain Monitor</a>:</strong> Token holder analytics and whale tracking across <strong>6 chains</strong> (BSC, Ethereum, Polygon, Arbitrum, Base, Avalanche) with three-mode architecture (Basic Info, Top Holders, Full Snapshot) and known label identification</li>
+                        <li><strong><a href="https://github.com/adityonugrohoid/ratu-moon-radar" target="_blank" class="text-link">Moon Radar</a>:</strong> Multi-chain DEX pair scanner supporting <strong>4 chains</strong> (Ethereum, BNB Chain, Polygon, Base) with dynamic pair parsing and early token detection via 24h price gains</li>
                     </ul>
                     <footer>
-                        <a href="https://github.com/adityonugrohoid?tab=repositories" target="_blank" class="text-link">
-                            <i class="fab fa-github"></i> View All
+                        <a href="https://github.com/search?q=user%3Aadityonugrohoid+ratu-moon-radar+OR+ratu-onchain-monitor+OR+ratu-rest-api+OR+ratu-fix-bot&type=repositories"
+                            target="_blank" class="text-link">
+                            <i class="fab fa-github"></i> View Suite
+                        </a>
+                    </footer>
+                </article>
+
+                <!-- Project 6: Telecom ML Framework -->
+                <article class="project-card">
+                    <span class="architecture">XGBoost • LightGBM • SHAP • Optuna • Python 3.11</span>
+                    <h3><a href="https://github.com/adityonugrohoid/telecom-ml-framework" target="_blank">Telecom ML Framework</a></h3>
+                    <p class="project-subtitle">Framework for Telecom AI/ML Solutions</p>
+                    <p>
+                        A framework for building AI/ML solutions to real-world telecom challenges, emphasizing domain expertise and practical problem-solving. Provides 6 ML project templates covering the most common telecom AI/ML use cases with complete technical specifications.
+                    </p>
+                    <ul>
+                        <li><strong>Six Use Case Specifications:</strong> Complete specs for Churn Prediction, Root Cause Analysis, Anomaly Detection, QoE Prediction, Capacity Forecasting, Network Optimization with problem framing and model recommendations</li>
+                        <li><strong>Domain-Informed Data Generators:</strong> Hand-crafted generators embedding real telecom physics (SINR, Shannon capacity, congestion patterns) vs generic synthetic data, demonstrating domain expertise</li>
+                        <li><strong>SHAP-Compatible Standards:</strong> Enforced dependency versions (numpy&lt;2.0, xgboost&lt;2.0) ensuring interpretability works without conflicts, critical for business adoption</li>
+                        <li><strong>Unified Project Structure:</strong> Consistent template across all projects with config, data generation, features, models, notebooks, and tests enabling rapid project creation</li>
+                    </ul>
+                    <footer>
+                        <a href="https://github.com/adityonugrohoid/telecom-ml-framework" target="_blank" class="text-link">
+                            <i class="fab fa-github"></i> View Framework
                         </a>
                     </footer>
                 </article>
             </div>
 
-            <div style="margin-top: 2rem; text-align: center;">
-                <a href="https://github.com/adityonugrohoid?tab=repositories" class="btn">
+            <div class="center-btn">
+                <a href="https://adityonugrohoid.github.io/projects/" class="btn">
                     View Complete Portfolio
                 </a>
             </div>
         </section>
 
-
         <!-- Tech Stack -->
-        <section id="tech" class="fade-in">
-            <h2><span class="mono">03.</span> Technical Stack</h2>
+        <section class="section">
+            <h2><span class="section-number">03.</span> Technical Stack</h2>
             <div class="tech-grid">
                 <div class="tech-item">
-                    <h4><i class="fas fa-code"></i> Languages & Frameworks</h4>
-                    <p>Python 3.10+, Python Async (asyncio), Streamlit, FastAPI</p>
+                    <h4><i class="fas fa-code"></i> Programming & Frameworks</h4>
+                    <p>Python, Python Async (asyncio), Streamlit, FastAPI, LangChain, Pandas</p>
                 </div>
                 <div class="tech-item">
-                    <h4><i class="fas fa-brain"></i> AI/ML Models</h4>
-                    <p>Google Gemini 2.0 (Flash/Lite/Pro), Vertex AI, Multimodal AI (Text/Image/Video)</p>
-                </div>
-                <div class="tech-item">
-                    <h4><i class="fas fa-robot"></i> AI Engineering</h4>
-                    <p>RAG, LangChain, Agentic Patterns, Function Calling, Google Gen AI SDK, Prompt Engineering</p>
-                </div>
-                <div class="tech-item">
-                    <h4><i class="fas fa-database"></i> ML & Data Science</h4>
-                    <p>XGBoost, LightGBM, scikit-learn, SHAP, Pandas, NumPy, Synthetic Data (SDV), Text Embeddings</p>
+                    <h4><i class="fas fa-brain"></i> AI & Machine Learning</h4>
+                    <p>Google Gemini 2.0 (Flash/Lite/Pro), Vertex AI, RAG, XGBoost, LightGBM, scikit-learn, SHAP, Agentic Patterns, Function Calling, Prompt Engineering</p>
                 </div>
                 <div class="tech-item">
                     <h4><i class="fas fa-cogs"></i> MLOps & Data Engineering</h4>
-                    <p>Reproducible Pipelines, Schema Validation, Model Evaluation, Batch Prediction, Parquet, CLI Automation, SQL</p>
+                    <p>Reproducible Pipelines, Schema Validation, Model Evaluation, Parquet, Synthetic Data (SDV), Text Embeddings, Batch Prediction, CLI Automation, SQL</p>
                 </div>
                 <div class="tech-item">
                     <h4><i class="fas fa-server"></i> Cloud & Infrastructure</h4>
@@ -246,45 +524,48 @@
                     <p>REST, WebSockets, FIX 4.4, JSON-RPC, GraphQL</p>
                 </div>
                 <div class="tech-item">
-                    <h4><i class="fas fa-tools"></i> DevOps & Tools</h4>
-                    <p>Git/GitHub, Pytest, Ruff, UV Manager</p>
+                    <h4><i class="fas fa-tools"></i> Tools</h4>
+                    <p>UV Manager, Pytest, Ruff, Git/GitHub, Tableau</p>
                 </div>
             </div>
         </section>
 
         <!-- Seeking Section -->
-        <section id="seeking" class="fade-in">
-            <h2><span class="mono">04.</span> What's Next?</h2>
-            <p style="margin-bottom: 2rem; color: var(--text-secondary);">
+        <section class="section">
+            <h2><span class="section-number">04.</span> What's Next?</h2>
+            <p style="margin-bottom: 2rem; color: #718096;">
                 I am currently open for opportunities!
             </p>
-            <div class="project-card" style="border: 1px solid var(--accent);">
-                <h3 style="color: var(--accent);">Available for AI/ML Engineering roles focusing on:</h3>
-                <ul style="list-style: none; margin-top: 1rem; color: var(--text-secondary);">
-                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
-                            style="color: var(--accent); margin-right: 10px;"></i> <strong>Telecom/Industrial AI:</strong>
-                        Domain-specific AI/ML solutions leveraging network optimization expertise</li>
-                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
-                            style="color: var(--accent); margin-right: 10px;"></i> <strong>Observability & APM:</strong>
-                        Automated remediation and log analysis</li>
-                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
-                            style="color: var(--accent); margin-right: 10px;"></i> <strong>Fintech & Trading:</strong>
-                        Low-latency decision systems</li>
+            <div class="seeking-box">
+                <h3>Available for AI/ML Engineering roles focusing on:</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <span><strong>Telecom/Industrial AI:</strong> Domain-specific AI/ML solutions leveraging network optimization expertise</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <span><strong>Observability & APM:</strong> Automated remediation and log analysis</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <span><strong>Fintech & Trading:</strong> Low-latency decision systems</span>
+                    </li>
                 </ul>
-                <div style="margin-top: 2rem; text-align: center;">
+                <div class="center-btn">
                     <a href="mailto:adityo.nugroho.id@gmail.com" class="btn">Get in Touch</a>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <p>Designed & Built by Adityo Nugroho</p>
-            <p>Based in Indonesia (UTC+7) | Remote Preferred</p>
-        </footer>
+    </div>
 
-    </main>
+    <!-- Footer -->
+    <footer>
+        <p>Designed & Built by Adityo Nugroho</p>
+        <p>Based in Indonesia (UTC+7) | Remote Preferred</p>
+    </footer>
 
-    <script src="js/main.js"></script>
 </body>
 
 </html>
