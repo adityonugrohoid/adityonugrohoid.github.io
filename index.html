@@ -284,20 +284,150 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .header {
+                padding: 2.25rem 0;
+            }
+
             .hero-content h1 {
-                font-size: 2rem;
+                font-size: 2.375rem;
+                margin-bottom: 0.375rem;
             }
 
             .subtitle {
-                font-size: 1rem;
+                font-size: 1.075rem;
+                line-height: 1.5;
+                margin-bottom: 0.75rem;
+            }
+
+            .tagline {
+                font-size: 1.0375rem;
+                margin: 1.125rem 0;
+                line-height: 1.65;
+            }
+
+            .links {
+                gap: 0.75rem;
+                margin-top: 1.25rem;
+            }
+
+            .btn {
+                padding: 0.675rem 1.25rem;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 1.25rem;
+                margin: 1rem 0;
+            }
+
+            .section h2 {
+                font-size: 1.35rem;
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .section p {
+                font-size: 0.9rem;
+            }
+
+            .section p + p {
+                margin-top: 0.75rem;
+            }
+
+            .value-prop {
+                padding: 1rem;
+                margin: 1rem 0;
+                font-size: 0.9rem;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .project-card {
+                padding: 1rem;
+            }
+
+            .project-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .architecture {
+                font-size: 0.7rem;
+                line-height: 1.3;
+            }
+
+            .project-subtitle {
+                font-size: 0.8rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .project-card p {
+                font-size: 0.875rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .project-card ul {
+                margin-left: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .project-card li {
+                margin-bottom: 0.4rem;
+                line-height: 1.4;
+            }
+
+            .project-card footer {
+                padding-top: 0.75rem;
+                margin-top: 0.5rem;
             }
 
             .tech-grid {
                 grid-template-columns: 1fr;
+                gap: 0.75rem;
+                margin-top: 1rem;
+            }
+
+            .tech-item {
+                padding: 1rem;
+            }
+
+            .tech-item h4 {
+                font-size: 0.95rem;
+            }
+
+            .tech-item p {
+                font-size: 0.8rem;
+                line-height: 1.4;
+            }
+
+            .seeking-box {
+                padding: 1.25rem;
+            }
+
+            .seeking-box h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .seeking-box li {
+                font-size: 0.875rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .center-btn {
+                margin-top: 1rem;
+            }
+
+            footer {
+                padding: 2rem 0;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -336,10 +466,7 @@
         <section class="section">
             <h2><span class="section-number">01.</span> About Me</h2>
             <p>
-                After 18 years leading network optimization for operators serving millions as Deputy GM at Huawei, I repeatedly encountered operational limits that traditional tooling could not address. This experience motivated my transition into hands-on AI/ML engineering. Over the following 14 months from Nov 2024 to Jan 2026, I designed and delivered <strong style="color: #3182ce;">12 end-to-end systems</strong> spanning AI-driven workflows, data pipelines, and supporting infrastructure across telecom, industrial, and fintech domains. These include GenAI on Cloud Run, RAG-based systems, agentic workflows, MLOps pipelines, and low-latency trading and market data systems.
-            </p>
-            <p>
-                I bring deep domain experience from large-scale network operations into the AI systems I now build. My designs prioritize reliability under real-world constraints, including partial outages, race conditions, and external rate limits.
+                After leading network optimization strategy for operators serving millions, I witnessed what breaks at scale and built AI systems to fix it. I pivoted into AI/ML engineering to address these bottlenecks, architecting and deploying <strong style="color: #3182ce;">12 end-to-end systems</strong> in 14 months (Nov 2024-Jan 2026), including AI/ML systems (GenAI, RAG, Agentic AI, MLOps, AI Observability) and production infrastructure.
             </p>
             <div class="value-prop">
                 "I translate operational complexity into measurable outcomes by designing AI systems that remain reliable under real-world stress, not just controlled demonstrations."
@@ -355,7 +482,6 @@
                 <article class="project-card">
                     <span class="architecture">Gemini 2.0 Flash Lite • Async Python • RAG • ChromaDB • Function Calling • Pydantic</span>
                     <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+incident-commander+OR+noc-oracle+OR+net-ops-agent&type=repositories" target="_blank">TRINITY Operations Suite</a></h3>
-                    <p class="project-subtitle">AI-Powered Network Operations: Observe → Decide → Act</p>
                     <p>
                         A cohesive integrated suite solving the "Mean Time to Recovery" bottleneck with three
                         integrated components deployed as part of NOC operations:
@@ -377,7 +503,6 @@
                 <article class="project-card">
                     <span class="architecture">Vertex AI • Streamlit • Cloud Run • Gemini 2.0/2.5 • Docker</span>
                     <h3><a href="https://github.com/adityonugrohoid/google-cloud-ai-studio" target="_blank">Google Cloud AI Studio</a> <span style="color: #3182ce; font-size: 0.85rem;">● LIVE</span></h3>
-                    <p class="project-subtitle">Multi-Step GenAI Workflow for Architectural Design on Google Cloud</p>
                     <p>
                         Cloud-native Streamlit application demonstrating advanced GenAI workflow orchestration using
                         Google Vertex AI. Transforms simple text descriptions into photorealistic architectural renders
@@ -397,7 +522,7 @@
                         <span style="margin: 0 0.5rem;">•</span>
                         <a href="https://google-cloud-ai-studio-1099058340933.us-central1.run.app" target="_blank"
                             class="text-link">
-                            <i class="fas fa-external-link-alt"></i> View App
+                            <i class="fas fa-external-link-alt"></i> View App (Cloud Run)
                         </a>
                     </footer>
                 </article>
@@ -406,7 +531,6 @@
                 <article class="project-card">
                     <span class="architecture">Parquet • XGBoost • LightGBM • SHAP • Optuna • Deterministic Seeding</span>
                     <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+telecom-digital-twin+OR+telecom-qoe-analytics&type=repositories" target="_blank">Telecom Digital Twin + MLOps Pipeline</a></h3>
-                    <p class="project-subtitle">End-to-End MLOps: Synthetic Generation → Model Training → Strategic Insights</p>
                     <p>
                         A complete MLOps ecosystem combining deterministic data generation with ML workflows.
                         Generates <strong>50K users with 5.6M sessions</strong> in reproducible fashion, then applies
@@ -428,7 +552,6 @@
                 <article class="project-card">
                     <span class="architecture">Async Python • WebSockets • Donchian Channels • Systemd • Ed25519</span>
                     <h3><a href="https://github.com/adityonugrohoid/trailing-edge" target="_blank">Trailing Edge Trading Bot</a></h3>
-                    <p class="project-subtitle">High-Performance Async Trading Bot with Dynamic Trailing Take-Profit</p>
                     <p>
                         High-performance asynchronous Python trading bot for Binance featuring dynamic trailing take-profit strategies, regime detection, Donchian channel gating, and Ed25519 authentication. Built for 24/7 autonomous operation on low-cost infrastructure with low-latency reaction times.
                     </p>
@@ -449,7 +572,6 @@
                 <article class="project-card">
                     <span class="architecture">Multi-Chain • FIX 4.4 • Moralis • Ankr • Binance</span>
                     <h3><a href="https://github.com/search?q=user%3Aadityonugrohoid+ratu-moon-radar+OR+ratu-onchain-monitor+OR+ratu-rest-api+OR+ratu-fix-bot&type=repositories" target="_blank">RATU Trading Suite</a></h3>
-                    <p class="project-subtitle">Real-time Automated Trading Unified: Multi-Chain Crypto Infrastructure</p>
                     <p>
                         A comprehensive 4-component crypto trading infrastructure for multi-chain token discovery,
                         on-chain analytics, market data, and low-latency order execution:
@@ -472,7 +594,6 @@
                 <article class="project-card">
                     <span class="architecture">XGBoost • LightGBM • SHAP • Optuna • Python 3.11</span>
                     <h3><a href="https://github.com/adityonugrohoid/telecom-ml-framework" target="_blank">Telecom ML Framework</a></h3>
-                    <p class="project-subtitle">Framework for Telecom AI/ML Solutions</p>
                     <p>
                         A framework for building AI/ML solutions to real-world telecom challenges, emphasizing domain expertise and practical problem-solving. Provides 6 ML project templates covering the most common telecom AI/ML use cases with complete technical specifications.
                     </p>
@@ -491,7 +612,7 @@
             </div>
 
             <div class="center-btn">
-                <a href="https://adityonugrohoid.github.io/projects/" class="btn">
+                <a href="https://github.com/adityonugrohoid?tab=repositories" class="btn">
                     View Complete Portfolio
                 </a>
             </div>
